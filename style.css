@@ -59,29 +59,57 @@ body {
   z-index: 10;
 }
 
+
+
+/* estilo geral do alerta */
 .alerta {
   position: fixed;
   top: 20px;
-  right: 300px;
+  right: 20px;
   background: red;
   color: white;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 15px 25px;
   border-radius: 10px;
-  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
   animation: piscar 1s infinite;
   z-index: 9999;
-  box-shadow: 0 0 15px rgba(255,0,0,0.7);
+  overflow: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.alerta a {
-  color: #fff;
-  text-decoration: underline;
+/* link que cobre todo o alerta */
+.conteudo-alerta {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
 }
 
-/* efeito de piscar */
+/* botão X no canto */
+.fechar {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.fechar:hover {
+  opacity: 1;
+}
+
+/* piscar suave */
 @keyframes piscar {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  50% { opacity: 0.4; }
+}
+
+/* animação de saída */
+.sumir {
+  opacity: 0;
+  transform: translateY(-10px);
 }

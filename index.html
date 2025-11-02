@@ -20,18 +20,22 @@
 
 
 
-</div>
 
-<div class="alerta">
-  ⚠️ <a href="https://chat.whatsapp.com/CexbFCIt9vbFZ9VVwDnNpG?mode=wwt" target="_blank">Gostaria de participar de nossa <br> comunidade gamers? <br>clique aqui!
+
+<div id="alerta" class="alerta">
+  <a href="https://chat.whatsapp.com/CexbFCIt9vbFZ9VVwDnNpG?mode=wwt" target="_blank" class="conteudo-alerta">
+    ⚠️ Gostaria de participar de nossa <br> comunidade gamers? <br>clique aqui!
   </a>
+  <span class="fechar" onclick="fecharAlerta()">✖</span>
 </div>
 
-
-
-
-
-
+<script>
+  function fecharAlerta() {
+    const alerta = document.getElementById('alerta');
+    alerta.classList.add('sumir'); // adiciona classe com animação de saída
+    setTimeout(() => alerta.style.display = 'none', 500); // remove após 0.5s
+  }
+</script>
    
 
 
